@@ -1,0 +1,8 @@
+Run server with test command:
+java -jar RelayrCzujniki.jar --url "https://raw.githubusercontent.com/relayr/pdm-test/master/sensors.yml"
+
+Sample requests..:
+curl -XGET "http://localhost:8080/engines?pressure_threshold=75&temp_threshold=75"
+
+curl -XPOST "http://localhost:8080/sensors/3142" -H "Content-Type: application/json" -d
+'{"operation": "increment", "value": "5"}' 
